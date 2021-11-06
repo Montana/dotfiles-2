@@ -86,6 +86,7 @@ nnoremap <expr> <leader>t g:NERDTree.IsOpen() ? ':NERDTreeClose<CR>' : @% == '' 
 packloadall
 let g:prettier#autoformat = 1
 let g:prettier#autoformat_require_pragma = 0
+let g:prettier#config#tab_width = '2'
 
 "emmet
 "map emmet leader key to ,
@@ -110,12 +111,13 @@ let g:airline_skip_empty_sections = 1
 set noshowmode
 
 "SKELETON
-nnoremap <leader>react :-1read $HOME/.config/nvim/skeleton/react_function<cr>gg0fEciw<C-r>=expand("%:t")<CR><Esc>2b2dw
-
+nnoremap <leader>react :-1read $HOME/.config/nvim/skeleton/react_function<cr>3gg0fEciw<C-r>=expand("%:t")<CR><Esc>2b2dw
+nnoremap <leader>ignorevim :-1read $HOME/.config/nvim/skeleton/ignorevim<cr>
 
 "Testing
 set termguicolors
 set signcolumn=yes:1
+highlight SignColumn guibg=#282a36 ctermbg=white
 set nojoinspaces
 set updatetime=300 " Reduce time for highlighting other references
 set redrawtime=10000 " Allow more time for loading syntax on large files
