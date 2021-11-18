@@ -1,4 +1,4 @@
-"STYLING
+"STYLIN
 syntax on "turn on syntax highlighting
 set background=dark "set background to dark
 set number relativenumber "set relative number
@@ -53,8 +53,9 @@ nnoremap "" "*
 noremap v <Nop>
 "enter visual mode using :Visual
 command! Visual normal! v
-"change surrond from ys to ss
-nnoremap ys ss
+"change surround from ys to leader s
+noremap <leader>s ys 
+
 
 
 "PLUGINS
@@ -65,11 +66,13 @@ call plug#begin(stdpath('data') . '/plugged')
 	Plug 'junegunn/fzf.vim'
 	Plug 'airblade/vim-rooter'
 	Plug 'tpope/vim-surround'
+	Plug 'tpope/vim-commentary'
 
 "Testing
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-
+Plug 'lukas-reineke/indent-blankline.nvim'
+Plug 'folke/todo-comments.nvim'
 "Webdev plugins
 	Plug 'prettier/vim-prettier', { 'do': 'npm install' }
 	Plug 'mattn/emmet-vim'
@@ -111,8 +114,10 @@ let g:airline_skip_empty_sections = 1
 set noshowmode
 
 "SKELETON
-nnoremap <leader>react :-1read $HOME/.config/nvim/skeleton/react_function<cr>3gg0fEciw<C-r>=expand("%:t")<CR><Esc>2b2dw
+nnoremap <leader>rt :-1read $HOME/.config/nvim/skeleton/react_tsx<cr>7gg0fEciw<C-r>=expand("%:t")<CR><Esc>2b2dw
+nnoremap <leader>rj :-1read $HOME/.config/nvim/skeleton/react_jsx<cr>3gg0fEciw<C-r>=expand("%:t")<CR><Esc>2b2dw
 nnoremap <leader>ignorevim :-1read $HOME/.config/nvim/skeleton/ignorevim<cr>
+nnoremap <leader>tern :-1read $HOME/.config/nvim/skeleton/ternaryoperatorjsx<cr>0atrue<Esc>:Prettier<cr>wciw
 
 "Testing
 set termguicolors
@@ -122,3 +127,13 @@ set nojoinspaces
 set updatetime=300 " Reduce time for highlighting other references
 set redrawtime=10000 " Allow more time for loading syntax on large files
 
+highlight IndentColor guifg=#1F5C53
+let g:indent_blankline_char_highlight_list = ['IndentColor']
+
+lua << EOF
+  require("todo-comments").setup {
+    -- your configuration comes here
+    -- or leave it empty to use the default settings
+    -- refer to the configuration section below
+  }
+EOF
