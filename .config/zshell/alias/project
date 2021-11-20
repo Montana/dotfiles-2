@@ -1,6 +1,6 @@
 # cottage
 alias cottage="cd ~/Desktop/Software_development/cottage/cottage-app"
-#alias cotstart="npm run dev; tmux split-window -h; git status; tmux select-pane -L; tmux split-window; npm run prisma-studio; tmux select-pane -R"
+alias cotstart="~/.config/zshell/scripts/cottagestart.sh"
 
 # the peoples advocacy group
 alias tpag="cd ~/Desktop/Software_development/freelance_projects/client_websites/tpag-next"
