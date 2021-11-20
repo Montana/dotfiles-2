@@ -1,0 +1,2 @@
+# colorize list
+alias ls='ls --color=auto'

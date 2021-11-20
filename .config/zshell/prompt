@@ -1,0 +1,7 @@
+# prompt
+source ~/.config/git/git-prompt.sh
+autoload -U colors && colors
+NEWLINE=$'\n'
+setopt PROMPT_SUBST ; PS1='%{$fg[magenta]%}%c %{$fg[green]%}$(__git_ps1 "(%s)") %{$reset_color%} ${NEWLINE}> '
+alias reload='source ~/.zshrc'
+

@@ -1,0 +1,3 @@
+# git
+alias newmain="git checkout temp; git branch -D main; git fetch; git checkout main"
+alias pullmain="git checkout main; git pull origin main"
