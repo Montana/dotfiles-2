@@ -1,0 +1,15 @@
+//import { useState, useEffect } from "react";
+
+interface OwnProps {
+	DESTRUCTUREDPROP: [];
+}
+
+export default function Example({ DESTRUCTUREDPROP }: OwnProps) {
+	console.log(DESTRUCTUREDPROP);
+
+	return (
+		<div>
+			<div></div>
+		</div>
+	);
+}
