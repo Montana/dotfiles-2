@@ -1,6 +1,10 @@
+source ~/.config/git/git-prompt.sh
+autoload -U colors && colors
 [[ $TERM != "screen" ]] && exec tmux
 NEWLINE=$'\n'
-PROMPT="%~ ${NEWLINE}> %"
+setopt PROMPT_SUBST ; PS1='%{$fg[magenta]%}%~ ${NEWLINE}%{$fg[green]%}$(__git_ps1 "(%s)") %{$reset_color%} ${NEWLINE}> '
+
+alias reload='source ~/.zshrc'
 alias vim='nvim'
 alias prisma='npm run prisma-studio'
 export FZF_DEFAULT_COMMAND="fd --hidden --follow --exclude '.git' --exclude 'node_modules'"
