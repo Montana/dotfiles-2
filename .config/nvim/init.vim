@@ -120,6 +120,11 @@ let g:airline_powerline_fonts = 1
 let g:airline_skip_empty_sections = 1
 set noshowmode
 
+" Fugitive
+nnoremap <leader>gw :Gwrite<CR>
+nnoremap <leader>gc :Git commit<CR>
+
+
 "SKELETON
 nnoremap <leader>rt :-1read $HOME/.config/nvim/skeleton/react_tsx<cr>7gg0fEciw<C-r>=expand("%:t")<CR><Esc>2b2dw
 nnoremap <leader>rj :-1read $HOME/.config/nvim/skeleton/react_jsx<cr>3gg0fEciw<C-r>=expand("%:t")<CR><Esc>2b2dw
