@@ -68,16 +68,23 @@ call plug#begin(stdpath('data') . '/plugged')
 	Plug 'tpope/vim-surround'
 	Plug 'tpope/vim-commentary'
 
-"Testing
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'lukas-reineke/indent-blankline.nvim'
-Plug 'folke/todo-comments.nvim'
+"Styling plugins
+	Plug 'vim-airline/vim-airline'
+	Plug 'vim-airline/vim-airline-themes'
+	Plug 'lukas-reineke/indent-blankline.nvim'
+
 "Webdev plugins
 	Plug 'prettier/vim-prettier', { 'do': 'npm install' }
 	Plug 'mattn/emmet-vim'
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
 	Plug 'rodrigore/coc-tailwind-intellisense', {'do': 'npm install'}
+
+
+"Testing
+Plug 'folke/todo-comments.nvim'
+Plug 'tpope/vim-fugitive'
+
+
 call plug#end()
 
 "NERDTree
