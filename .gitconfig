@@ -5,3 +5,4 @@
 [alias]
 	co = checkout
 	br = branch
+	ss = status --short
