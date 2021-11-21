@@ -1,4 +1,5 @@
 #! /bin/zsh
+tmux rename-session "cottage"
 cd ~/Desktop/Software_development/cottage/cottage-app 
 tmux send-keys "cd ~/Desktop/Software_development/cottage/cottage-app" Enter
 tmux send-keys "npm run dev" Enter
