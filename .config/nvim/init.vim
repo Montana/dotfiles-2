@@ -1,4 +1,4 @@
-"STYLIN
+"STYLING
 syntax on "turn on syntax highlighting
 set background=dark "set background to dark
 set number relativenumber "set relative number
@@ -52,7 +52,7 @@ nnoremap "" "*
 "remove 'v' from entering visual mode
 noremap v <Nop>
 "enter visual mode using :Visual
-command! Visual normal! v
+"command! Visual normal! v
 "change surround from ys to leader s
 noremap <leader>s ys 
 
@@ -83,7 +83,6 @@ call plug#begin(stdpath('data') . '/plugged')
 "Testing
 Plug 'folke/todo-comments.nvim'
 Plug 'tpope/vim-fugitive'
-
 
 call plug#end()
 
