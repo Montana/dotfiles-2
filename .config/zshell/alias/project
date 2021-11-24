@@ -8,3 +8,6 @@ alias tpag="cd ~/Desktop/Software_development/freelance_projects/client_websites
 # comedy humboldt
 alias comedy="cd ~/Desktop/Software_development/freelance_projects/client_websites/comedy-humboldt-next"
 
+# Notes
+#alias notes="cd ~/Library/Mobile\ Documents/iCloud~md~obsidian/Documents/San\ Junipero/Daily\ Notes"
+alias notes="~/dailynotes/.scripts/newDailyNote.sh"

@@ -83,6 +83,7 @@ call plug#begin(stdpath('data') . '/plugged')
 "Testing
 Plug 'folke/todo-comments.nvim'
 Plug 'tpope/vim-fugitive'
+Plug 'junegunn/goyo.vim'
 
 call plug#end()
 
