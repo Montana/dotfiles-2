@@ -2,7 +2,7 @@
 [[ $TERM != "screen" ]] && exec tmux
 
 # source prompt file
-source ~/.config/zshell/prompt
+#source ~/.config/zshell/prompt
 
 # source alias files {{{
 # ==============================================================================
@@ -24,7 +24,7 @@ alias areact="more ~/.config/zshell/alias/react"
 
 # source project jumps
 source ~/.config/zshell/alias/project
-alias aproject="more ~/.config/zshell/alias/react"
+alias aproject="more ~/.config/zshell/alias/project"
 # source alias files }}}
 # ==============================================================================
 
@@ -33,6 +33,9 @@ alias zshrc='nvim ~/.zshrc'
 alias vimrc='nvim ~/.config/nvim/init.vim'
 
 
-alias prisma='npm run prisma-studio'
 # testing
 export FZF_DEFAULT_COMMAND="fd --hidden --follow --exclude '.git' --exclude 'node_modules'"
+
+# ~/.zshrc
+eval "$(starship init zsh)"
+
