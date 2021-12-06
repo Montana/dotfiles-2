@@ -1,3 +1,5 @@
 # colorize list
 alias ls='ls --color=auto'
 alias c='clear'
+
+alias reload='source ~/.zshenv'
