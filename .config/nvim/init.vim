@@ -55,7 +55,8 @@ noremap v <Nop>
 "command! Visual normal! v
 "change surround from ys to leader s
 noremap <leader>s ys 
-
+"turn off relativenumber
+nmap <leader>p :set rnu!<cr>
 
 
 "PLUGINS
@@ -96,7 +97,7 @@ nnoremap <expr> <leader>t g:NERDTree.IsOpen() ? ':NERDTreeClose<CR>' : @% == '' 
 packloadall
 let g:prettier#autoformat = 1
 let g:prettier#autoformat_require_pragma = 0
-let g:prettier#config#tab_width = '2'
+let g:prettier#config#tab_width = 1
 
 "emmet
 "map emmet leader key to ,
