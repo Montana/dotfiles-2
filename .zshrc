@@ -2,7 +2,7 @@
 [[ $TERM != "screen" ]] && exec tmux
 
 # source prompt file
-#source ~/.config/zshell/prompt
+source ~/.config/zshell/prompt
 
 # source alias files {{{
 # ==============================================================================
@@ -35,7 +35,3 @@ alias vimrc='nvim ~/.config/nvim/init.vim'
 
 # testing
 export FZF_DEFAULT_COMMAND="fd --hidden --follow --exclude '.git' --exclude 'node_modules'"
-
-# ~/.zshrc
-eval "$(starship init zsh)"
-

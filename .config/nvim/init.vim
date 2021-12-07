@@ -8,6 +8,7 @@ set shiftwidth=2
 set hidden
 set nowrap
 set list
+set showmatch
 set listchars=tab:\ \ ,trail:·
 :highlight NonText ctermfg=16 guifg=#61E8E1
 :highlight EndOfBuffer guifg=bg
@@ -23,7 +24,7 @@ set listchars=tab:\ \ ,trail:·
 "FUNCTIONALITY
 set path+=** "Search down into subfolders
 set wildmenu "display all matching files when tab complete
-set wildignore=node_modules/**,.git/**
+set wildignore+=**/.git/**,**/__pycache__/**,**/venv/**,**/node_modules/**,**/dist/**,**/build/**,*.o,*.pyc,*.swp
 let mapleader = " " "set leader to space
 set scrolloff=4
 set sidescrolloff=8
@@ -39,40 +40,33 @@ vnoremap < <gv
 vnoremap > >gv
 
 "REMAPPINGS
-"open vimrc in v-split
-nmap <leader>rc :vs ~/.config/nvim/init.vim<cr>
-"open searched file in vsplit
-"nnoremap <leader>nn :vert sfind<space>
-"ignore files in wildmenu
-set wildignore+=**/.git/**,**/__pycache__/**,**/venv/**,**/node_modules/**,**/dist/**,**/build/**,*.o,*.pyc,*.swp
 "open file under cursor in vertical split
-nnoremap <C-w>f <C-w>f<C-w>L
+"nnoremap <C-w>f <C-w>f<C-w>L
 "access system clipboard
 nnoremap "" "*
 "remove 'v' from entering visual mode
 noremap v <Nop>
-"enter visual mode using :Visual
-"command! Visual normal! v
-"change surround from ys to leader s
-noremap <leader>s ys 
-"turn off relativenumber
+"toggle relativenumber
 nmap <leader>p :set rnu!<cr>
 
 
 "PLUGINS
 call plug#begin(stdpath('data') . '/plugged')
-"fucntional plugins 
+
+"fucntional plugins
 	Plug 'preservim/nerdtree'
 	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 	Plug 'junegunn/fzf.vim'
 	Plug 'airblade/vim-rooter'
 	Plug 'tpope/vim-surround'
 	Plug 'tpope/vim-commentary'
+	Plug 'tpope/vim-fugitive'
 
 "Styling plugins
 	Plug 'vim-airline/vim-airline'
 	Plug 'vim-airline/vim-airline-themes'
 	Plug 'lukas-reineke/indent-blankline.nvim'
+	Plug 'folke/todo-comments.nvim'
 
 "Webdev plugins
 	Plug 'prettier/vim-prettier', { 'do': 'npm install' }
@@ -80,12 +74,10 @@ call plug#begin(stdpath('data') . '/plugged')
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
 	Plug 'rodrigore/coc-tailwind-intellisense', {'do': 'npm install'}
 
-
-"Testing
-Plug 'folke/todo-comments.nvim'
-Plug 'tpope/vim-fugitive'
+"Prose plugings
 Plug 'junegunn/goyo.vim'
 
+"Testing
 call plug#end()
 
 "NERDTree
@@ -100,7 +92,6 @@ let g:prettier#autoformat_require_pragma = 0
 let g:prettier#config#tab_width = 1
 
 "emmet
-"map emmet leader key to ,
 let g:user_emmet_leader_key=','
 
 "Coc
@@ -124,7 +115,7 @@ set noshowmode
 
 " Fugitive
 nnoremap <leader>gw :Gwrite<CR>
-nnoremap <leader>gc :Git commit<CR>
+nnoremap <leader>gr :Gread<CR>
 
 
 "SKELETON
