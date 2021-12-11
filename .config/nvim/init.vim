@@ -48,6 +48,7 @@ nnoremap "" "*
 noremap v <Nop>
 "toggle relativenumber
 nmap <leader>p :set rnu!<cr>
+cmap Gdiff Gdiffsplit!
 
 
 "PLUGINS
