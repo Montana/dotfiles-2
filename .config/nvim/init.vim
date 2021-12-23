@@ -124,6 +124,7 @@ nnoremap <leader>rt :-1read $HOME/.config/nvim/skeleton/react_tsx<cr>7gg0fEciw<C
 nnoremap <leader>rj :-1read $HOME/.config/nvim/skeleton/react_jsx<cr>3gg0fEciw<C-r>=expand("%:t")<CR><Esc>2b2dw
 nnoremap <leader>ignorevim :-1read $HOME/.config/nvim/skeleton/ignorevim<cr>
 nnoremap <leader>tern :-1read $HOME/.config/nvim/skeleton/ternaryoperatorjsx<cr>0atrue<Esc>:Prettier<cr>wciw
+nnoremap <leader>cl :-1read $HOME/.config/nvim/skeleton/className<cr>ci"
 
 "Testing
 set termguicolors
