@@ -2,9 +2,10 @@
 
 interface OwnProps {
 	DESTRUCTUREDPROP: [];
-}
+	PARENTFUCNTION: () => void;
+	}
 
-export default function Example({ DESTRUCTUREDPROP }: OwnProps) {
+export default function Example({ DESTRUCTUREDPROP, PARENTFUCNTION }: OwnProps) {
 	console.log(DESTRUCTUREDPROP);
 
 	return (

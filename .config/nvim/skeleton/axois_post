@@ -1,0 +1,7 @@
+	const FUNCTIONNAME = async () => {
+		try {
+			await Axios.post('/api/', {});
+		} catch (error) {
+			throw error;
+		}
+	};

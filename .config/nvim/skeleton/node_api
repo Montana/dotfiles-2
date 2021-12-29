@@ -1,0 +1,19 @@
+import { NextApiHandler } from "next";
+
+const APINAME: NextApiHandler = async (req, res) => {
+	switch (req.method) {
+		case "POST": {
+			res.status(200).end();
+		}
+		case "GET": {
+			res.json({''});
+			res.status(200).end();
+		}
+    default: {
+      console.error(`invalid method ${req.method}`);
+      res.status(404).end();
+    }
+	}
+};
+
+export default APINAME;

@@ -120,11 +120,14 @@ nnoremap <leader>gr :Gread<CR>
 
 
 "SKELETON
-nnoremap <leader>rt :-1read $HOME/.config/nvim/skeleton/react_tsx<cr>7gg0fEciw<C-r>=expand("%:t")<CR><Esc>2b2dw
+nnoremap <leader>rt :-1read $HOME/.config/nvim/skeleton/react_tsx<cr>8gg0fEciw<C-r>=expand("%:t")<CR><Esc>2b2dw
 nnoremap <leader>rj :-1read $HOME/.config/nvim/skeleton/react_jsx<cr>3gg0fEciw<C-r>=expand("%:t")<CR><Esc>2b2dw
 nnoremap <leader>ignorevim :-1read $HOME/.config/nvim/skeleton/ignorevim<cr>
 nnoremap <leader>tern :-1read $HOME/.config/nvim/skeleton/ternaryoperatorjsx<cr>0atrue<Esc>:Prettier<cr>wciw
 nnoremap <leader>cl :-1read $HOME/.config/nvim/skeleton/className<cr>ci"
+nnoremap <leader>api :-1read $HOME/.config/nvim/skeleton/node_api<cr>3gg0fAciw<C-r>=expand("%:t")<CR><Esc>GkfAciw<C-r>=expand("%:t")<CR><Esc>
+nnoremap <leader>hook :-1read $HOME/.config/nvim/skeleton/react_hook<cr>3gg0fHciw<C-r>=expand("%:t")<CR><Esc>GkfHciw<C-r>=expand("%:t")<CR><Esc>11ggfAciw
+nnoremap <leader>post :-1read $HOME/.config/nvim/skeleton/axois_post<cr>fFciw
 
 "Testing
 set termguicolors
