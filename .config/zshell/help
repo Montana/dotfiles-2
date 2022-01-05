@@ -1,0 +1,21 @@
+Options:
+  Git Alias:
+    newmain               Nuke local main & rebuild from remote
+    pullmain              Switch to main & update local main from any branch
+    newmaster             Nuke local master & rebuild from remote
+    pullmaster            Switch to master & update local master from any branch
+
+  React Alias:
+    adts                  Add typescript to a project
+    jstots                Change JavaScript files to typescript files
+    tailwindnext          Create a new Next.js project with Tailwind
+
+  Shell Alias:
+    c                     Clear shell
+    reload                Reload shell source
+
+  Shell Alias:
+    tv                    Split TMUX windows verticaly
+    th                    Split TMUX windows horizontally
+    tkill                 Kill TMUX pane
+    tstart                Start prefered TMUX window positioning
