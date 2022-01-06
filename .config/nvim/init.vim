@@ -38,6 +38,14 @@ nmap <silent> <C-l> <C-w>l
 " Reselect visual selection after indenting
 vnoremap < <gv
 vnoremap > >gv
+" Change operations go to blackhole register
+nnoremap c "_c
+nnoremap C "_C
+" Backspace switches to last buffer
+nnoremap <Backspace> <C-^>
+" Increment & deincremnet numbers
+nnoremap + <C-a>
+nnoremap - <C-x>
 
 "REMAPPINGS
 "open file under cursor in vertical split
@@ -136,6 +144,7 @@ highlight SignColumn guibg=#282a36 ctermbg=white
 set nojoinspaces
 set updatetime=300 " Reduce time for highlighting other references
 set redrawtime=10000 " Allow more time for loading syntax on large files
+
 
 highlight IndentColor guifg=#1F5C53
 let g:indent_blankline_char_highlight_list = ['IndentColor']
